@@ -11,12 +11,12 @@ import 'firebase/storage'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: 'AIzaSyCzncVrTTJzE7uysjEbeANcAIINwnYwLHE',
-    authDomain: 'pets-care-f4e66.firebaseapp.com',
-    projectId: 'pets-care-f4e66',
-    storageBucket: 'pets-care-f4e66.appspot.com',
-    messagingSenderId: '394440874026',
-    appId: '1:394440874026:web:9ed9719c099e2f37b74b53',
+    apiKey: 'AIzaSyDgxYjIdHZ52f5rgR2Cy_lUTAuFsBQcRK8',
+    authDomain: 'pets-care-814f7.firebaseapp.com',
+    projectId: 'pets-care-814f7',
+    storageBucket: 'pets-care-814f7.appspot.com',
+    messagingSenderId: '739230472821',
+    appId: '1:739230472821:web:08fc89cd4c89e9ef13b63c',
 }
 
 // Initialize Firebase
