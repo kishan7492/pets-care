@@ -1,16 +1,10 @@
-export const Actions = {
-    ADD_POST: "ADD_POST",
-    DELETE_POST: "DELTE_POST",
-  };
-  
-  export const addPost = post => ({
-    type: Actions.ADD_POST,
-    post
-  });
-  
-  export const deletePost = post => ({
-    type: Actions.DELTE_POST,
-    post
-  });
-
-  
+export function reducer(state, action) {
+    switch (action.type) {
+        case 'login':
+            return { ...state, login: true }
+        case 'logoff':
+            return { ...state, login: true }
+        default:
+            throw new Error()
+    }
+}
