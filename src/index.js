@@ -6,24 +6,22 @@ import { BrowserRouter } from 'react-router-dom'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
-import {postReducer} from "./store/app.reducer"
-import { createStore } from "redux";
+import { postReducer } from './store/app.reducer'
+import { createStore } from 'redux'
 
-const defaultState = [{}];
-const store = createStore(postReducer, defaultState);
+const defaultState = [{}]
+const store = createStore(postReducer, defaultState)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     <React.StrictMode>
-<<<<<<< HEAD
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-=======
-        <Provider store={store}>
-            <App />
-        </Provider>
->>>>>>> feature/amit-1
+        
+            <BrowserRouter>
+            <Provider store={store}>
+                <App />
+                </Provider>
+            </BrowserRouter>
+        
     </React.StrictMode>
 )
 
