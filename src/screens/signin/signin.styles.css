@@ -77,7 +77,7 @@ shades: #faad14
 }
 
 .ant-input-affix-wrapper{
-    border-color: none !important;
+    border: none !important;
 }
 
 .login-form-button:hover,
