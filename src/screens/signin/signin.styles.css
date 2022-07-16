@@ -1,3 +1,17 @@
+/* 
+
+Primary: #ffc53d gold-5
+tint: #ffd666
+shades: #faad14
+
+
+*/
+
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
 .formContainer {
     height: 100vh;
     display: flex;
@@ -5,14 +19,20 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #f5f5f5;
-    background-image: url('../../assets/images/pets.jpg')
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(235, 151, 78, 0.35),
+        rgba(230, 125, 34, 0.35)
+      ),url('../../assets/images/pets-wallpaper.png');
+    background-size: contain;
+    /* background-image: url('../../assets/images/pets.jpg') */
 }
 
 .titleFormContainer {
-    padding: 60px;
-    background: rgb(201, 198, 198, 0.7);
+    padding: 90px 60px 120px 60px;
+    background: #ffc53d;
     border-radius: 30px;
+    box-shadow:0px 0px 24px rgba(0, 0,0, 0.2);
 }
 
 .titleContainer {
@@ -32,13 +52,44 @@
 }
 
 .title {
-    font-size: 43px;
+    font-size: 64px;
     letter-spacing: 0em;
     font-weight: 600;
-
+    text-transform: uppercase;
+    color: #613400;
 }
 
 .buttonsContainer {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+.login-form-button {
+    background: #613400 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 0px 35px !important;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.ant-input-affix-wrapper{
+    border-color: none !important;
+}
+
+.login-form-button:hover,
+.login-form-button:active{
+    background-color: #874d00 !important;
+}
+
+.buttonsContainer {
+    margin-top: 40px;
+}
+
+img {
+    width: 400px !important;
+    margin-bottom: 45px;
 }

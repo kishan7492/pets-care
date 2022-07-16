@@ -9,6 +9,9 @@ import {
 } from 'firebase/auth'
 import './signin.styles.css'
 
+import Image from "../../assets/images/pets_care_3.png";
+
+
 const Signin = () => {
     const [authError, setAuthError] = useState('')
     const onFinish = (values) => {
@@ -27,12 +30,12 @@ const Signin = () => {
         <div className="formContainer">
             <div className="titleFormContainer">
                 <div className="titleContainer">
-                    <h1 className="title">Pets Care</h1>
+                    <img class="logo-horizontal" src={Image}/>
                 </div>
                 {authError && authError !== '' && (
                     <div className="error">{authError}</div>
                 )}
-                <Form
+                <Form   
                     name="normal_login"
                     className="login-form"
                     initialValues={{
@@ -88,7 +91,15 @@ const Signin = () => {
                         >
                             Log in
                         </Button>
-                        Or <Link to="/signup">Register Now!</Link>
+                        Or 
+                        
+                        <Button
+                            type="primary"
+                            htmlType="submit"
+                            className="login-form-button"
+                        >
+                        <Link to="/signup">Register</Link>
+                        </Button>
                     </div>
                     {/* </Form.Item> */}
                 </Form>
