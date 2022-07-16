@@ -57,6 +57,7 @@ const Dashboard = () => {
                 <Layout
                     style={{
                         padding: '24px',
+                        height: 'fit-Content',
                     }}
                 >
                     <Content
