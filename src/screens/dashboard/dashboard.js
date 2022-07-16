@@ -1,9 +1,8 @@
 import { UserOutlined, SettingOutlined } from '@ant-design/icons'
 import { Layout, Menu } from 'antd'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Feed from '../../components/feed/feed'
 import Setting from '../../components/settings/setting'
-import { Link } from 'react-router-dom'
 import './dashboard.styles.css'
 const { Header, Content, Sider } = Layout
 
@@ -45,8 +44,13 @@ const Dashboard = () => {
                             borderRight: 0,
                         }}
                         items={sidebarItems}
-                        onClick={(item) => {
-                            console.log(item)
+                        onSelect={(item) => {
+                            setSelectedMenu(
+                                sidebarItems.find(
+                                    (sidebarItem) =>
+                                        sidebarItem.key === item.key
+                                )
+                            )
                         }}
                     />
                 </Sider>
