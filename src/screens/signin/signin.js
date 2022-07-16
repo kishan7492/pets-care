@@ -73,25 +73,24 @@ const Signin = () => {
                             placeholder="Password"
                         />
                     </Form.Item>
-                    <Form.Item>
-                        {/* //! not adding functionality to reset password. */}
-                        {/* <a className="login-form-forgot" href="">
+                    {/* <Form.Item> */}
+                    {/* //! not adding functionality to reset password. */}
+                    {/* <a className="login-form-forgot" href="">
                             Forgot password?
                         </a> */}
-                    </Form.Item>
+                    {/* </Form.Item> */}
 
-                    <Form.Item>
-                        <div className="buttonsContainer">
-                            <Button
-                                type="primary"
-                                htmlType="submit"
-                                className="login-form-button"
-                            >
-                                Log in
-                            </Button>
-                            Or <Link to="/signup">Register Now!</Link>
-                        </div>
-                    </Form.Item>
+                    <div className="buttonsContainer">
+                        <Button
+                            type="primary"
+                            htmlType="submit"
+                            className="login-form-button"
+                        >
+                            Log in
+                        </Button>
+                        Or <Link to="/signup">Register Now!</Link>
+                    </div>
+                    {/* </Form.Item> */}
                 </Form>
             </div>
         </div>
