@@ -1,28 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Form, Input, Button } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../../config/firebase'
-import {
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-} from 'firebase/auth'
-import './signin.styles.css'
 
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import './signin.styles.css'
+const isLoggedIn = (user) => {
+    return user && user.email ? true : false
+}
 const Signin = () => {
     const [authError, setAuthError] = useState('')
+    const [user, loading, error] = useAuthState(auth)
+
+    const navigate = useNavigate()
     const onFinish = (values) => {
         signInWithEmailAndPassword(auth, values.username, values.password)
             .then((userCredential) => {
-                // Signed in
                 const user = userCredential.user
-                console.log(user)
-                // ? Need to send user to the dashboard sreens.
+                if (user) navigate('/dashboard', { replace: true })
             })
             .catch((error) => {
                 setAuthError(error.message)
             })
     }
+
+    useEffect(() => {
+        if (isLoggedIn(user)) navigate('/dashboard', { replace: true })
+    }, [user, navigate])
+
     return (
         <div className="formContainer">
             <div className="titleFormContainer">

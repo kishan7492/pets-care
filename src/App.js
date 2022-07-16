@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import { Routes, Route } from 'react-router-dom'
-import { Signin, Signup } from './screens'
+import { Signin, Signup, Feed, Dashboard } from './screens'
 import './App.css'
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Signin />} />
                 <Route path="signup" element={<Signup />} />
+                <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
         </div>
     )
