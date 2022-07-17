@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Tabs, Card, Button, Row, Col } from 'antd'
-
+import { Tabs, Card, Button, Row, Col, Typography } from 'antd'
 import {
     SettingOutlined,
     EditOutlined,
@@ -10,6 +9,7 @@ import { firestore } from '../../config/firebase'
 import { collection, query, where, getDocs } from 'firebase/firestore'
 const { TabPane } = Tabs
 const { Meta } = Card
+const { Paragraph } = Typography
 
 const Setting = () => {
     const defaultTab = 'pets'
@@ -63,7 +63,17 @@ const Setting = () => {
                             >
                                 <Meta
                                     title={pet.name}
-                                    description={pet.description}
+                                    description={
+                                        <Paragraph
+                                            ellipsis={{
+                                                rows: 3,
+                                                expandable: true,
+                                                symbol: 'more',
+                                            }}
+                                        >
+                                            {pet.description}
+                                        </Paragraph>
+                                    }
                                 />
                             </Card>
                         </Col>
